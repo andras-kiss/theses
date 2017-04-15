@@ -1,0 +1,57 @@
+\section{Bevezetés}
+A Pásztázó Alagúthatás Mikroszkópia (STM, Scanning Tunnelling Microscopy) 1981-es feltalálása óta a felületanalízis hatalmas fejlődésnek indult.
+A módszer fontosságát jelzi, hogy megalkotójuk, Binni és Rohrer mindössze öt évvel később, 1986-ban Bonel-díjban részesültek úttörő munkájukért. 
+Ez a technika volt az első Pásztázó Mérőcsúcs Mikroszkópiás (SPM, Scanning Probe Microscopy) technika, melyet sok hasonló követett.
+Közös bennük az a helyi mérés, melyet egy raszter minden egyes előre meghatározott pontján végzünk el.
+A mért paraméter helykoordináták mentén való ábrázolásával rajzolható meg a mikroszkópiás kép.
+Legfőbb előnyük a hagyományos optikai mikroszkópiához képest az elképesztő felbontásuk.
+Mivel a technikát nem korlátozza az Abbes képlet, egyedi atomok is ,,láthatóvá'' tehetőek.
+Az eredeti STM technika változatai sorra jelentek meg az elkövetkező években.
+Az Atomerő Mikroszkópiát például 1982-ben találta fel, ugyancsak Binnig és Rohrer.
+
+1989-ben alkották meg elektrokémikusok a módszer elektrokémiai változatát, a Pásztázó Elektrokémiai Mikroszkópiát (PEKM, SECM = Scanning Electrochemical Microscopy).
+A működési elv ugyanaz, a különbség csak a mérőcsúcsban rejlik.
+Ebben az esetben ez egy mikroelektród.
+A technikával kémiai információ térképezhető nagy felbontással, felületek egész soráról.
+Legnagyobb hátránya a viszonylag kis sebessége, mely a pásztázási folyamat következménye.
+Az egész képet ugyanazzal a mérőcsúccsal kell végigpásztázni, szemben például az optikai mikroszkópiával, ahol leggyakrabban egy szenzor mátrixot alkalmazunk képalkotási célra.
+Ennek az a következménye, hogy minél több pontól áll a kép, annál tovább tart a képalkotás.
+Ez különösen nagy probléma a PEKM potenciometriás üzemmódjában.
+A potenciometriás cella válaszidejét az időállandó írja le, mely főleg az indikátor elektród ellenállásától függ.
+A mikroelektródok kis méretükből adódóan rendkívül nagy ellenállásúak lehetnek, elérve akár a G$\ohm$-os tartományt is.
+Ezért a képalkotás ideje jelentősen megnyúlhat, és általában percekben vagy akár órákban mérhető.
+
+A többi pásztázó technika jelentősen gyorsult az utóbbi néhány évtizedben, és sebességük lehetővé teszi videók rögzítését is.
+Az alacsony sebesség azonban egy sokszor elhanyagolt korlátja a PEKM technikának, ami akadályozza a gyors, és nagyfelbontású képek rögzítését.
+A kép vagy gyorsan elkészül de torzított lesz, vagy jó minőségű, de nem pillanatszerű.
+Így a kép egyes pontjainak nem csak eltérő térbeli, de eltérő időbeli koordinátái is lesznek.
+
+A disszertációmban ennek a problémának a megoldására irányuló munkámat írom le, és bemutatok három megoldást, melyeket kidolgoztam:
+
+\begin{enumerate}
+\item Újszerű, szilárd kontaktusú mikroelektródok használata mérőcsúcsként a hagyományos, folyadék kontaktusúak helyett.
+\item A pásztázási mintázatok és algoritmusok optimalizálása.
+\item A nagy sebességgel rögzített, de torzított képek dekonvolúciója.
+\end{enumerate}
+
+Első megközelítésben megpróbáltam az indikátor elektród ellenállását csökkenteni.
+A hagyományos folyadék kontaktus helyett, vezető polimer alapú, szilárd belső kontaktus használatával a potenciometriás mérőcella ellenállása, és így időállandója csökkenthető.
+Vezető polimereket használtak már korábban, de nem célzottan magnézium ion-szelektív mikroelektródok ellenállásának csökkentésére.
+
+A második módszer amit kidolgoztam a pásztázási mintázatok és algoritmusok optimalizálása.
+A legtöbb tanulmányozott rendszer meghatározott, egyszerű szimmetriával bír, melyre optimalizálható a pásztázás, a kisebb torzítás érdekében.
+Egy egyszerű, de gyakori szimmetriát, a körszimmetriát választottam, és kidolgoztam két optimalizált pásztázási mintázatot és hozzájuk tartozó algoritmust.
+
+A harmadik technika amit alkalmaztam, a képfeldolgozás volt.
+A potenciometriás cella időbeli válaszát leírő függvény jól ismert.
+Néhány könnyen mérhető paraméter birtokában egy dekonvolúciós függvény megadható.
+Ennek segítségével az egyensúlyi potenciál megjósolható a kép minden egyes mintavételi pontjára, és a torzítás drasztikusan csökkenthető.
+
+Ezen technikák hatékonyságát először modellrendszereken vizsgáltam, majd korróziós tanulmányokban mutattam be alkalmazhatóságukat.
+Több együttműködés során használtam a kidolgozott módszereket, és néhány eredményt ezek közül is bemutatok a disszertációmban.
+
+Vizsgáltam továbbá az elektromos tér hatását a potenciometriás PEKM képalkotásra, mely sok vizsgált rendszerben jelen van.
+Bizonyos esetekben, ahol nagy potenciálkülönbség van a vizsgált rendszer különböző pontjai között, erős elektromos tér alakul ki.
+Ilyen például a galvanikus korrózió, mely során nagy potenciálkülönbség van a galvánpárok felületei között.
+Az elektromos potenciál mérőcsúcsnál jelentkező értéke befolyásolja a mért értéket.
+Megvizsgáltam ezen hatás nagyságát, és megpróbáltam elkülöníteni az elektromos tér hatását.
