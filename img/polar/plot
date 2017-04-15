@@ -48,28 +48,6 @@ set out "meander.eps"
 splot "meander.txt" u (($1-10)*100):(($2-10)*100):($3) notitle
 unset label
 
-set label "D" at -900, 800 tc rgb "white" font ",40" front
-set dgrid3d 21, 21, 10 gauss 100,100
-set cbrange [-0.23:-0.18]
-set out "web.eps"
-splot "web.txt" notitle
-unset label
-
-set label "B" at -900, 800 tc rgb "white" font ",40" front
-#set dgrid3d 21, 21, 1
-set dgrid3d 21, 21, 10 gauss 100,100
-set cbrange [-0.31:-0.28]
-set out "fastcomb.eps"
-splot "fastcomb.txt" u (($1-10)*100):(($2-10)*100):($3) notitle
-unset label
-
-set label "C" at -900, 800 tc rgb "white" font ",40" front
-set dgrid3d 21, 21, 1
-set cbrange [-0.305:-0.285]
-set out "comb.eps"
-splot "comb.txt" u (($1-10)*100):(($2-10)*100):($3) notitle
-unset label
-
 set label "B" at -900, 800 tc rgb "white" font ",40" front
 #set dgrid3d 22, 22, 1
 #set cbrange [-0.24:-0.23]
