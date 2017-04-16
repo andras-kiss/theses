@@ -14,10 +14,9 @@ Response characteristics were investigated by measuring the electrode resistance
 Calculated from the voltage divider measurements, electrode resistance was $4.8~$G$\ohm$ and $0.56~$G$\ohm$ for the liquid, and solid contact electrodes, respectively.
 Based on these values, the solid contact electrode was expected to produce less distorted images with the same scanning parameters.
 
-To confirm it, a Mg$^{2+}$ ion diffusion source model system was created, and the plane 100 $\upmu$m above the pipette orifice was scanned with both electrodes.
+To confirm it, a Mg$^{2+}$ ion diffusion source model system was created, and the plane 100 $\upmu$m above the pipette orifice -- holding 0.1 M MgCl$_2$ solution -- was scanned with both electrodes.
 Fig. \ref{fig:solid_liquid_pipette} shows the ISME images obtained using a liquid-contact (A), and a solid-contact (B), micropipette electrode.
 Both 2D ISME maps were recorded at the same scan rate.
-An upside down glass micropipette holding the 0.1 M MgCl$_2$ agar solution was used in the measurements plotted in Figs. \ref{fig:solid_liquid_pipette}A and \ref{fig:solid_liquid_pipette}B.
 Visual inspection of the two images clearly shows significant image distortion in the X-direction with the liquid-contact ISME due its slower response as expected based on its higher resistance.
 It can also be observed in the image scanned with the solid-contact electrode, although to a much less extent.
 Another important feature to note in the images is the difference in the highest magnesium ion concentration observed with the two electrodes.
@@ -44,11 +43,12 @@ Using the Mg$^{2+}$ concentration profiles, Mg$^{2+}$ flow rate from the Mg piec
         \Omega = 4 D C_s a
 \end{equation}
 
-where $\Omega$ is the amount of Mg$^{2+}$ released from the disc shaped Mg/Al surface, $D$ is the diffusion coefficient of Mg$^{2+}$, $C_s$ is the surface concentration of Mg$^{2+}$ (at the height $z$ = 0 $\upmu$m), a is the radius of the Mg/Al sample.
+where $\Omega$ is the amount of Mg$^{2+}$ released from the disc shaped Mg/Al surface, $D$ is the diffusion coefficient of Mg$^{2+}$, $C_s$ is the surface concentration of Mg$^{2+}$ (at the height $z$ = 0 $\upmu$m), $a$ is the radius of the Mg/Al sample.
 As the only unknown variable in the equation above, $\Omega$ could be calculated.
 
 Corrosion current between the Mg/Al sample and the Fe sample was also measured directly.
-Using Faraday's law of electrolysis, corrosion current could be calculated, and it was in fairly good agreement with the SECM measurement.
+Using Faraday's law of electrolysis, corrosion current could be calculated from the first method.
+It was in fairly good agreement with the SECM measurement.
 
 \subsection{Optimization of scanning algorithms}
 In the second and third approaches I exploit the properties of the potentiometric response function:
@@ -63,6 +63,8 @@ Distortion of an image can be measured as an average of the differences between 
 It can be lowered by carefully optimizing scanning patterns and algorithms, so that the probe passes through borders between regions of high and low concentrations as few times as possible.
 
 The results (Figure \ref{fig:simulations}) confirmed the presumption, that using the two new algorithms, images have less distortion, with higher similarity to the expected image.
+I have confirmed the results with simulations as well.
+Those results can be found in my dissertation.
 
 \begin{figure}
 \centering
@@ -95,7 +97,8 @@ Line blur distortion in the raw images is visible along the alternating scanline
 By deconvoluting the image, the expected potential map can be obtained (Fig. \ref{fig:deconvolution}B). 
 
 Not only the circular shape of the target in the images is restored, but the peak value above the center of the target as well.
-Maximum value in the raw scans was around $-300$ mV, whereas in the deconvoluted image, it was about $-260$ mV, with a significant difference between the two. 
+Maximum value in the raw scans was around $-300$ mV, whereas in the deconvoluted image, it was about $-260$ mV, with a significant difference between the two.
+I have confirmed the validity of the deconvoluted values by very slow line scans. 
 
 I obtained similar results with ionophore based ion selective micropipettes, which can be found in my dissertation. I haven't included those results here, due to the compact format of this booklet.
 
